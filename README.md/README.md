@@ -1,6 +1,7 @@
 # Efficient Data Communication and Structured Database Design 
 
-> **Module:** Efficient Data Communication and Structured Database Design 
+> **Module:** Efficient Data Communication and Structured Database Design
+
 > **Course:** Foundation of Computer Science | ST4015CMD
 
 ## Overview
