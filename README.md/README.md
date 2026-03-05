@@ -1,6 +1,6 @@
-# Data Systems & Security – Assignment Repository
+# Efficient Data Communication and Structured Database Design 
 
-> **Module:** Data Systems and Security
+> **Module:** Efficient Data Communication and Structured Database Design 
 > **Course:** Foundation of Computer Science | ST4015CMD
 
 ## Overview
@@ -29,7 +29,7 @@ This repository contains all practical files, scripts, diagrams, and SQL code su
 
 ---
 
-## Task 1 – Encoding Formats & Secure Protocols
+## Task 1 – ENCODING AND DATA TRANSMISSION
 
 **Files**
 - `scripts/encoding_demo.py`
