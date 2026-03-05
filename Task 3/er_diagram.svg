@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500"
+     font-family="Segoe UI, Arial, sans-serif" font-size="13">
+
+  <!-- Background -->
+  <rect width="860" height="500" fill="#f7f9fc" rx="14" ry="14"/>
+
+  <!-- ── Title ── -->
+  <text x="430" y="38" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a2e">
+    Entity-Relationship Diagram — College Club Membership (3NF)
+  </text>
+  <text x="430" y="57" text-anchor="middle" font-size="11" fill="#666">
+    Task 3 · Foundation of Computer Science | ST4015CMD
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       STUDENT ENTITY  (left)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="28" y="78" width="210" height="210" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.2"/>
+  <!-- Header -->
+  <rect x="28" y="78" width="210" height="38" rx="10" fill="#2563eb"/>
+  <rect x="28" y="104" width="210" height="12" fill="#2563eb"/>
+  <text x="133" y="103" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">STUDENT</text>
+
+  <!-- PK row -->
+  <rect x="28" y="116" width="210" height="32" fill="#bfdbfe" rx="0"/>
+  <text x="48"  y="136" font-size="13" fill="#1e3a8a" text-decoration="underline">🔑 StudentID</text>
+  <text x="175" y="136" font-size="11" fill="#1e40af" font-style="italic">PK  INT</text>
+
+  <!-- Attributes -->
+  <line x1="28" y1="148" x2="238" y2="148" stroke="#93c5fd" stroke-width="1"/>
+  <text x="48" y="168" font-size="12" fill="#1e3a8a">StudentName</text>
+  <text x="175" y="168" font-size="11" fill="#1e40af" font-style="italic">VARCHAR</text>
+
+  <line x1="28" y1="180" x2="238" y2="180" stroke="#93c5fd" stroke-width="1"/>
+  <text x="48" y="200" font-size="12" fill="#1e3a8a">Email</text>
+  <text x="175" y="200" font-size="11" fill="#1e40af" font-style="italic">UNIQUE</text>
+
+  <line x1="28" y1="212" x2="238" y2="212" stroke="#93c5fd" stroke-width="1"/>
+
+  <!-- Cardinality label on entity -->
+  <text x="133" y="268" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="bold">
+    1 student → many memberships
+  </text>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       MEMBERSHIP ENTITY  (centre — junction table)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="310" y="68" width="240" height="260" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5" stroke-dasharray="7 3"/>
+  <!-- Header -->
+  <rect x="310" y="68" width="240" height="38" rx="10" fill="#ca8a04"/>
+  <rect x="310" y="94"  width="240" height="12" fill="#ca8a04"/>
+  <text x="430" y="93" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">MEMBERSHIP</text>
+  <text x="430" y="109" text-anchor="middle" font-size="10" fill="#fff">Junction / Associative Table</text>
+
+  <!-- PK row -->
+  <rect x="310" y="106" width="240" height="32" fill="#fde68a" rx="0"/>
+  <text x="330" y="126" font-size="13" fill="#78350f" text-decoration="underline">🔑 MembershipID</text>
+  <text x="510" y="126" font-size="11" fill="#92400e" font-style="italic">PK</text>
+
+  <!-- FK attributes -->
+  <line x1="310" y1="138" x2="550" y2="138" stroke="#fcd34d" stroke-width="1"/>
+  <text x="330" y="158" font-size="12" fill="#78350f">StudentID</text>
+  <text x="490" y="158" font-size="11" fill="#92400e" font-style="italic">FK → Student</text>
+
+  <line x1="310" y1="170" x2="550" y2="170" stroke="#fcd34d" stroke-width="1"/>
+  <text x="330" y="190" font-size="12" fill="#78350f">ClubID</text>
+  <text x="490" y="190" font-size="11" fill="#92400e" font-style="italic">FK → Club</text>
+
+  <line x1="310" y1="202" x2="550" y2="202" stroke="#fcd34d" stroke-width="1"/>
+  <text x="330" y="222" font-size="12" fill="#78350f">JoinDate</text>
+  <text x="490" y="222" font-size="11" fill="#92400e" font-style="italic">DATE</text>
+
+  <line x1="310" y1="234" x2="550" y2="234" stroke="#fcd34d" stroke-width="1"/>
+
+  <!-- Resolves label -->
+  <text x="430" y="296" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">
+    Resolves M:N between Student &amp; Club
+  </text>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       CLUB ENTITY  (right)
+  ══════════════════════════════════════════════════════ -->
+  <rect x="622" y="78" width="210" height="240" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.2"/>
+  <!-- Header -->
+  <rect x="622" y="78"  width="210" height="38" rx="10" fill="#16a34a"/>
+  <rect x="622" y="104" width="210" height="12" fill="#16a34a"/>
+  <text x="727" y="103" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">CLUB</text>
+
+  <!-- PK row -->
+  <rect x="622" y="116" width="210" height="32" fill="#bbf7d0" rx="0"/>
+  <text x="642" y="136" font-size="13" fill="#14532d" text-decoration="underline">🔑 ClubID</text>
+  <text x="785" y="136" font-size="11" fill="#166534" font-style="italic">PK  VARCHAR</text>
+
+  <!-- Attributes -->
+  <line x1="622" y1="148" x2="832" y2="148" stroke="#86efac" stroke-width="1"/>
+  <text x="642" y="168" font-size="12" fill="#14532d">ClubName</text>
+  <text x="785" y="168" font-size="11" fill="#166534" font-style="italic">VARCHAR</text>
+
+  <line x1="622" y1="180" x2="832" y2="180" stroke="#86efac" stroke-width="1"/>
+  <text x="642" y="200" font-size="12" fill="#14532d">ClubRoom</text>
+  <text x="785" y="200" font-size="11" fill="#166534" font-style="italic">VARCHAR</text>
+
+  <line x1="622" y1="212" x2="832" y2="212" stroke="#86efac" stroke-width="1"/>
+  <text x="642" y="232" font-size="12" fill="#14532d">ClubMentor</text>
+  <text x="785" y="232" font-size="11" fill="#166534" font-style="italic">VARCHAR</text>
+
+  <line x1="622" y1="244" x2="832" y2="244" stroke="#86efac" stroke-width="1"/>
+
+  <text x="727" y="282" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="bold">
+    1 club → many memberships
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       RELATIONSHIP LINES + CARDINALITY
+  ══════════════════════════════════════════════════════ -->
+  <defs>
+    <marker id="crow-many" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
+      <!-- Crow's foot (many) -->
+      <line x1="0" y1="5" x2="10" y2="0" stroke="#555" stroke-width="1.5"/>
+      <line x1="0" y1="5" x2="10" y2="10" stroke="#555" stroke-width="1.5"/>
+      <line x1="3" y1="5" x2="10" y2="0" stroke="#555" stroke-width="1.5"/>
+      <line x1="3" y1="5" x2="10" y2="10" stroke="#555" stroke-width="1.5"/>
+    </marker>
+    <marker id="one-end" markerWidth="8" markerHeight="10" refX="2" refY="5" orient="auto">
+      <!-- Single vertical bar (one) -->
+      <line x1="2" y1="0" x2="2" y2="10" stroke="#555" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <!-- Student (1) ──── (M) Membership -->
+  <!-- Line -->
+  <line x1="238" y1="183" x2="310" y2="183" stroke="#555" stroke-width="2.2"
+        marker-start="url(#one-end)" marker-end="url(#crow-many)"/>
+  <!-- Cardinality text -->
+  <text x="246" y="175" font-size="13" font-weight="bold" fill="#2563eb">1</text>
+  <text x="296" y="175" font-size="13" font-weight="bold" fill="#ca8a04">N</text>
+
+  <!-- Membership (M) ──── (1) Club -->
+  <line x1="550" y1="183" x2="622" y2="183" stroke="#555" stroke-width="2.2"
+        marker-start="url(#crow-many)" marker-end="url(#one-end)"/>
+  <text x="555" y="175" font-size="13" font-weight="bold" fill="#ca8a04">N</text>
+  <text x="608" y="175" font-size="13" font-weight="bold" fill="#16a34a">1</text>
+
+  <!-- Overall M:N label (below relationship lines) -->
+  <text x="430" y="345" text-anchor="middle" font-size="13" font-weight="bold" fill="#7c3aed">
+    ◀── Many-to-Many (M:N) resolved via Membership ──▶
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       LEGEND
+  ══════════════════════════════════════════════════════ -->
+  <rect x="28" y="370" width="804" height="110" rx="10" fill="#fff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="48" y="393" font-size="13" font-weight="bold" fill="#374151">Legend</text>
+
+  <!-- Student colour -->
+  <rect x="48"  y="402" width="16" height="16" fill="#2563eb" rx="3"/>
+  <text x="70"  y="415" font-size="12" fill="#374151">Student entity</text>
+
+  <!-- Membership colour -->
+  <rect x="220" y="402" width="16" height="16" fill="#ca8a04" rx="3"/>
+  <text x="242" y="415" font-size="12" fill="#374151">Membership junction (resolves M:N)</text>
+
+  <!-- Club colour -->
+  <rect x="530" y="402" width="16" height="16" fill="#16a34a" rx="3"/>
+  <text x="552" y="415" font-size="12" fill="#374151">Club entity</text>
+
+  <!-- Keys legend -->
+  <text x="48"  y="442" font-size="12" fill="#555">🔑 = Primary Key (PK)</text>
+  <text x="220" y="442" font-size="12" fill="#555">FK = Foreign Key (references another table's PK)</text>
+  <text x="530" y="442" font-size="12" fill="#555">Dashed border = Junction/Associative table</text>
+
+  <text x="48"  y="464" font-size="12" fill="#555">1 = One side  │  N = Many side  │  Crow's foot = Many end of relationship</text>
+  <text x="48"  y="480" font-size="11" fill="#888">Schema is in Third Normal Form (3NF): no redundancy, no partial or transitive dependencies.</text>
+</svg>
